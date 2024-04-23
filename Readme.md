@@ -1,4 +1,8 @@
-﻿# Generating a SoulerCoaster in Unity
+[![Unity Assetstore](https://img.shields.io/badge/Unity_Assetstore-black)](https://assetstore.unity.com/packages/vfx/soulercaster-generator-275055)
+[![Static Badge](https://img.shields.io/badge/Artstation-blue)](https://www.artstation.com/a/35249108)
+
+
+ # Generating a SoulerCoaster in Unity
 ![cover](/resources/cover.png)
 If you search for SoulerCoaster, you will find a multitude of names for it.
 It is also named Curvemesh, Splinemesh, or Swoosh.
@@ -187,4 +191,4 @@ Here are all the resources used in the tutorial:
 If you don't want to implement the SoulerCoaster on your own, you can use this Unity package.
 It contains a sophisticated mesh generator, several geometric path generators, the needed shaders, and some example textures.
 
-You can find it in the Unity AssetStore: https://assetstore.unity.com/packages/vfx/soulercaster-generator-275055
+You can find it in the Unity AssetStore: https://assetstore.unity.com/packages/vfx/soulercaster-generator-275055.
