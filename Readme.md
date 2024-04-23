@@ -1,18 +1,18 @@
 ﻿# Generating a SoulerCoaster in Unity
-![cover](../cover.png)
+![/resources/cover](../cover.png)
 If you search for SoulerCoaster, you will find a multitude of names for it.
 It is also named Curvemesh, Splinemesh, or Swoosh.
 
 They describe a technique to visualize magic or energetic effects.
 
 # The SoulerCoaster is a path mesh with an overlapping UV map.
-![basicQuads](/basicQuad.png)
+![basicQuads](/resources/basicQuad.png)
 
 It is defined as two quads that are oriented orthogonal to each other.
 They share the same UV space.
 So a texture appearing on the vertical quad also appears the same on the horizontal quad.
 
-![basicQuads](/quadWithTexture.png)
+![basicQuads](/resources/quadWithTexture.png)
 
 We can now scroll the texture over these quads to generate a moving effect.
 
@@ -132,25 +132,25 @@ All referenced files are available at the end of the article.
 ## We generate the mesh along the path of a LineRenderer.
 At first, we need to add the SoulerCasterTutorial component to a GameObject.
 
-![component](soulerCoasterComponent.png)
+![component](/resources/soulerCoasterComponent.png)
 > If you can't select the component, you either have a compile error somewhere, or the filename does not match the classname.
 
 That adds the **LineRenderer** and **MeshFilter** components to the GameObject.
 Now we fill the LineRenderer with a path:
-![path](lineRendererPath.png)
+![path](/resources/lineRendererPath.png)
 
 We can now right-click on the **SoulerCoasterTutorial** component and choose `generate`.
-![generate](soulerCoasterGenerate.png)
+![generate](/resources/soulerCoasterGenerate.png)
 If everything works, we see, that the MeshFilter has a new mesh assigned to it. 
 
 Now, we need to add a **MeshRenderer** component and assign a Material.
-![meshRenderer](meshRenderer.png)
+![meshRenderer](/resources/meshRenderer.png)
 We can see the two quads standing on top of each other.
 To animate this mesh with a texture we need to create a new Shader.
 To build this shader we will use Unity **ShaderGraph**.
 
 ## The shader scrolls over the provided texture.
-![shaderGraph](shader.png)
+![shaderGraph](/resources/shader.png)
 We want to create a transparent additive Shader that renders on both sides of the faces.
 You can change these settings in the `Graph Inspector`.
 
@@ -165,13 +165,13 @@ The output of this node will go straight into the Alpha Output node.
 The whole `.shadergraph` file is attached at the bottom.
 
 ## Finally, We create a material and assign the created Shader.
-![material](material.png)
+![material](/resources/material.png)
 
 We assign the texture and set tiling and speed.
 The y-tiling is higher than the x-tiling because the mesh has more length than width.
 
 We assign the created material to the `MeshRenderer` component to see the result.
-![complete](complete.png)
+![complete](/resources/complete.png)
 
 ## Wrapping up
 The hardest part is the mesh generation.
@@ -180,9 +180,9 @@ Some paths won't be possible with this algorithm.
 For the sake of simplicity, I omitted the implementation of edge cases.
 
 Here are all the resources used in the tutorial:
-- [SoulerCoasterTutorial.cs](SoulerCoasterTutorial.cs)
-- [SoulerCasterTutorial.shadergraph](SoulerCasterTutorial.shadergraph)
-- [texture.png](texture.png)
+- [SoulerCoasterTutorial.cs](/resources/SoulerCoasterTutorial.cs)
+- [SoulerCasterTutorial.shadergraph](/resources/SoulerCasterTutorial.shadergraph)
+- [texture.png](/resources/texture.png)
 
 If you don't want to implement the SoulerCoaster on your own, you can use this Unity package.
 It contains a sophisticated mesh generator, several geometric path generators, and the needed shaders.
