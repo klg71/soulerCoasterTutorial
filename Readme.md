@@ -175,7 +175,7 @@ We assign the created material to the `MeshRenderer` component to see the result
 
 ## Wrapping up
 The hardest part is the mesh generation.
-This covers only the basic use cases.
+This tutorial covers only the basic use cases.
 Some paths won't be possible with this algorithm.
 For the sake of simplicity, I omitted the implementation of edge cases.
 
@@ -185,9 +185,6 @@ Here are all the resources used in the tutorial:
 - [texture.png](/resources/texture.png)
 
 If you don't want to implement the SoulerCoaster on your own, you can use this Unity package.
-It contains a sophisticated mesh generator, several geometric path generators, and the needed shaders.
+It contains a sophisticated mesh generator, several geometric path generators, the needed shaders, and some example textures.
 
-You can find it on Artstation: 
-
-I also plan to release it in the Unity Assetstore.
-Sadly, the reviewing of a package can be measured in months so it will take some time till it is live there.
+You can find it in the Unity AssetStore: https://assetstore.unity.com/packages/vfx/soulercaster-generator-275055
