@@ -1,5 +1,5 @@
 ﻿# Generating a SoulerCoaster in Unity
-![/resources/cover](../cover.png)
+![cover](/resources/cover.png)
 If you search for SoulerCoaster, you will find a multitude of names for it.
 It is also named Curvemesh, Splinemesh, or Swoosh.
 
